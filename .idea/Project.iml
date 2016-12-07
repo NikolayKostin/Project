@@ -108,6 +108,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activejob (v5.0.0.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.0.0.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.0.0.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord-reset-pk-sequence (v0.2.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.0.0.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v7.1.4, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v6.5.3, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
@@ -141,6 +142,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.12.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v1.2.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.8.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v0.19.0, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v3.6.0, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.1, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, Remote-rvm:ruby-2.3.1-p112 [project]) [gem]" level="application" />
