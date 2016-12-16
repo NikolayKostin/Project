@@ -53,3 +53,5 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'pg'
 gem 'activerecord-reset-pk-sequence'
+
+gem 'rspec-rails'

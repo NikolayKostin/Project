@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'work/index'
+
+  get 'work/choose_theme'
+
+  get 'work/display_theme'
+
+  get 'work/results_exit'
+
   resources :themes
   resources :images
   resources :values
