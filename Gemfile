@@ -55,3 +55,8 @@ gem 'pg'
 gem 'activerecord-reset-pk-sequence'
 
 gem 'rspec-rails'
+
+group :production do
+  # For Heroku deployment
+  gem 'rails_12factor'
+end
