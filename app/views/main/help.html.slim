@@ -1,3 +1,6 @@
-h1 Help
-ul
-  li = link_to 'Main', main_index_path
+= provide(:title, t('shared.header.help'))
+
+.row
+  h1 У Вас возникли вопросы?
+  | Тогда Вы обратились по адресу.
+  p = link_to 'Project', root_path

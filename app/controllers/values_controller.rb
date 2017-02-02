@@ -56,7 +56,7 @@ class ValuesController < ApplicationController
   def destroy
     @value.destroy
     respond_to do |format|
-      format.html { redirect_to values_url, notice: 'Value was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Value was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ValuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def value_params
-      params.require(:value).permit(:iser_id, :image_id, :value)
+      params.require(:value).permit(:user_id, :image_id, :value)
     end
 end

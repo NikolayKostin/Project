@@ -3,7 +3,7 @@ h1 Listing values
 table
   thead
     tr
-      th Iser
+      th User
       th Image
       th Value
       th
@@ -13,7 +13,7 @@ table
   tbody
     - @values.each do |value|
       tr
-        td = value.iser_id
+        td = value.user_id
         td = value.image_id
         td = value.value
         td = link_to 'Show', value

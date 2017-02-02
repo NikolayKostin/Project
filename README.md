@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Описание проекта
 
-Things you may want to cover:
+Сайт для просмотра и оценки фотографий пользователями.
 
-* Ruby version
+1. Возможность создать учетную запись и авторизоваться
+2. Возможность загрузить gravatar и изменить контактные данные
+3. Администратор может создавать фотоальбомы с фотографиями
+4. Пользователи могут просматривать альбомы
+5. Пользователи могут поставить оценку фотографиям
 
-* System dependencies
 
-* Configuration
+***
+Описание сущностей
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Table       | Fields            | Comment                           |
+|-------------|-------------------|-----------------------------------|
+| User        |                   | Таблица пользователей             |
+|             | id                | PK                                |
+|             | name              | имя на сайте                      |
+|             | email             | используется для рег/авт          |
+|             | password_digest   | хешированный пароль               |
+|             | remember_digest   |                                   |
+|             | admin             | boolean                           |
+| Theme       |                   | Таблица фотоальбомов              |
+|             | id                | PK                                |
+|             | name              | Название альбома                  |
+|             | qty_items         |                                   |
+| Image       |                   | Таблица фотографий                |
+|             | id                | PK                                |
+|             | album_id          | FK                                |
+|             | file              | путь к файлу                      |
+|             | ave_value         |                                   |
+| Value       |                   | Таблица оценок фотографии         |
+|             | id                | PK                                |
+|             | user_id           | FK1                               |
+|             | image_id          | FK2                               |
+|             | value             |                                   |

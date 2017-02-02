@@ -13,6 +13,18 @@
     = f.label :email
     = f.text_field :email
   .field
-    = f.label :age
-    = f.number_field :age
+    = f.label :created_at
+    = f.datetime_select :created_at
+  .field
+    = f.label :updated_at
+    = f.datetime_select :updated_at
+  .field
+    = f.label :password_digest
+    = f.text_field :password_digest
+  .field
+    = f.label :remember_digest
+    = f.text_field :remember_digest
+  .field
+    = f.label :admin
+    = f.check_box :admin
   .actions = f.submit

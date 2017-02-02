@@ -20,4 +20,31 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  shared:
+    header:
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+      users: "Users"
+      themes: "Themes"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+      images: "Image"
+      competitions: "Competitions"
+    theme:
+      create: "Create"
+  main:
+    index:
+      signup: "Sign up"
+  users:
+    show:
+      my_profile: "My profile"
+    edit:
+      edit_user: "Edit user"
+    themes:
+      show:
+        theme: "Theme"
+      edit:
+        edit_theme: "Edit theme"

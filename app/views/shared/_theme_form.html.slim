@@ -1,0 +1,21 @@
+= form_for(@theme, html: { multipart: true }) do |f|
+  = render 'shared/error_message', object: f.object
+
+  - if current_user.admin?
+    = f.check_box :competition, value: 'true'
+    |  фотоальбом для оценок
+  - else
+    = hidden_field_tag :competition, 'false'
+
+  = f.label :theme_name, 'Название альбома'
+  = f.text_field :theme_name, class: 'form-control'
+  .half-down
+  = f.label :theme_description, 'Описание альбома'
+  = f.text_area :theme_description, class: 'form-control', placeholder: 'Опишите о чем ваш альбом...'
+  .photo-form
+  = f.fields_for :images, Image.new do |image_fields|
+
+    = image_fields.file_field :file, accept: 'image/jpeg, image/gif, image/png'
+
+  .half-down
+  = f.submit t('shared.theme.create'), class: 'btn btn-primary'

@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -24,8 +25,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# Use ActiveModel has_secure_password для хеширования пароля
+gem 'bcrypt', '~> 3.1.7'
+# gem 'active_model_serializers'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -44,19 +46,46 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'haml-rails'
-gem 'slim'
-gem 'slim-rails'
-gem 'bootstrap-sass'
-gem 'pg'
-gem 'activerecord-reset-pk-sequence'
-
-gem 'rspec-rails'
-
 group :production do
   # For Heroku deployment
   gem 'rails_12factor'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# templates
+gem 'haml-rails'
+gem 'slim'
+gem 'slim-rails'
+# design
+gem 'bootstrap-sass'
+gem 'bootstrap-sass-extras'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass'
+# Allows resetting the id of an AR table to 0. Useful after a delete_all. Works in Postgres and Sqlite (not MySQL) for now.
+gem 'activerecord-reset-pk-sequence', '~> 0.2.1'
+
+# for tests
+gem 'rspec-rails'
+# gem 'shoulda'
+
+#Ruby Internationalization and localization solution
+gem 'i18n'
+
+#A library for generating fake data such as names, addresses, and phone numbers.
+#gem 'faker'
+
+#для пагинации
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+#для изображений
+#добавляет загрузчик изображений
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+gem 'jquery-slick-rails'
+
+#для nested_form
+gem 'nested_form'

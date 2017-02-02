@@ -1,25 +1,12 @@
-h1 Listing users
+= provide(:title, t('shared.header.users'))
 
-table
-  thead
-    tr
-      th Name
-      th Email
-      th Age
-      th
-      th
-      th
+.row
+  h1 = t('shared.header.users')
 
-  tbody
-    - @users.each do |user|
-      tr
-        td = user.name
-        td = user.email
-        td = user.age
-        td = link_to 'Show', user
-        td = link_to 'Edit', edit_user_path(user)
-        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+  = will_paginate
 
-br
-
-= link_to 'New User', new_user_path
+  ul.users
+    = render @users
+  /@users - список объектов User, Rails автоматически перебирает ее
+      и отображает каждый элемент коллекции с помощью шаблона _user
+  = will_paginate

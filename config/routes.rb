@@ -1,25 +1,19 @@
 Rails.application.routes.draw do
-  get 'work/index'
+  root                           'main#index'
+  get 'help'                  => 'main#help'
+  get 'signup'                => 'users#new'
+  get 'login'                 => 'sessions#new'
+  post 'login'                => 'sessions#create'
+  delete 'logout'             => 'sessions#destroy'
+  #get 'competitions'          => 'competitions#index'
+  g#et '/competitions/(:id)'   => 'competitions#select_photos'
+  #get '/info/(:id)'           => 'competitions#show_info'
+  #get '/results/(:id)'        => 'competitions#results'
 
-  get 'work/choose_theme'
-
-  get 'work/display_theme'
-
-  get 'work/results_exit'
-
-  resources :themes
+  resources :users
+  resources :themes #обеспечивает автоматический вызов всех методов REST
   resources :images
   resources :values
-  resources :users
-  root 'main#index'
 
-  get 'main/index'
-
-  get 'main/help'
-
-  get 'main/about'
-
-  get 'main/contacts'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

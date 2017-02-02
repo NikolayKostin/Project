@@ -7,8 +7,20 @@ p
   strong Email:
   = @user.email
 p
-  strong Age:
-  = @user.age
+  strong Created at:
+  = @user.created_at
+p
+  strong Updated at:
+  = @user.updated_at
+p
+  strong Password digest:
+  = @user.password_digest
+p
+  strong Remember digest:
+  = @user.remember_digest
+p
+  strong Admin:
+  = @user.admin
 
 = link_to 'Edit', edit_user_path(@user)
 '|
